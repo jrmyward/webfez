@@ -1,0 +1,26 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - channels/application_cable/*
+    - config/deploy/*
+    - config/environments/*
+    - config/initializers/*
+    - config/puma*
+    - config/routes.rb
+    - config/secrets*
+    - config/sidekiq*
+    - db/migrate/*
+    - db/schema.rb
+    - Guardfile
+    - lib/capistrano/**/*
+    - node_modules/**/*
+    - spec/**/*
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 100
+
+Style/Documentation:
+  Enabled: false
