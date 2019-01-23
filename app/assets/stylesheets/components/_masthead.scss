@@ -1,0 +1,21 @@
+.masthead {
+  background-color: map-get($colors, 'red');
+
+  .nav-link {
+    color: map-get($colors, 'white');
+
+    &:hover {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+
+  &--brand {
+    background-color: transparent;
+    border-bottom: 1px solid map-get($grays, '400');
+
+    .brand-logo {
+      width: 100%
+    }
+  }
+}

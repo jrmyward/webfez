@@ -1,14 +1,82 @@
-%nav.navbar.navbar-expand-md.navbar-dark.bg-secondary
-  .container
-    = link_to root_path, class: 'navbar-brand', title: 'AlKader Logo' do
-      Some image here
-    = button_tag(class: 'navbar-toggler', type: 'button',
-      data: { toggle: 'collapse', target: '#primaryNav' },
-      'aria-controls' => 'primaryNav',
-      'aria-expanded' => 'false',
-      'aria-label' => 'Toggle navigation') do
-      %span.navbar-toggler-icon
+%header
+  .masthead
+    .container
+      %nav.nav
+        = link_to('Be a Shriner',
+                  'https://www.beashrinernow.com',
+                  class: 'nav-link pl-0',
+                  target: '_blank')
+        %span.nav-link.mx-0.px-0
+          |
+        = link_to('Our Hospital',
+                  'https://www.shrinershospitalsforchildren.org/portland',
+                  class: 'nav-link',
+                  target: '_blank')
 
-    #primaryNav.navbar-collapse.collapse
-      %ul.navbar-nav.ml-auto
-        %li.nav-item
+  .masthead.masthead--brand
+    .container.py-3
+      .row
+        .col-6.mx-auto
+          = link_to root_path, class: 'brand', title: 'Al Kader Logo' do
+            = image_tag('logo.png',
+              alt: 'Al Kader logo',
+              class: 'brand-logo')
+  %nav.navbar.navbar-expand-md
+    .container
+      = button_tag(class: 'navbar-toggler text-danger pl-0',
+        type: 'button',
+        data: { toggle: 'collapse', target: '#primaryNav' },
+        'aria-controls' => 'primaryNav',
+        'aria-expanded' => 'false',
+        'aria-label' => 'Toggle navigation') do
+        %i.fa.fa-bars
+        Menu
+
+      #primaryNav.navbar-collapse.collapse
+        %ul.navbar-nav.flex-fill.justify-content-between
+          %li.nav-item.dropdown
+            = link_to('About',
+                      '#',
+                      id: 'ddAbout',
+                      class: 'nav-link dropdown-toggle',
+                      role: 'button',
+                      data: { toggle: 'dropdown'}, aria: { haspopup: true, expanded: false })
+            .dropdown-menu{ 'aria-lebelledby' => 'ddAbout'}
+              = link_to 'Link 1', '#', class: 'dropdown-item'
+              = link_to 'Link 2', '#', class: 'dropdown-item'
+          %li.nav-item.dropdown
+            = link_to('Charity',
+                      '#',
+                      id: 'ddCharity',
+                      class: 'nav-link dropdown-toggle',
+                      role: 'button',
+                      data: { toggle: 'dropdown'}, aria: { haspopup: true, expanded: false })
+            .dropdown-menu{ 'aria-lebelledby' => 'ddCharity'}
+              = link_to 'Link 1', '#', class: 'dropdown-item'
+              = link_to 'Link 2', '#', class: 'dropdown-item'
+          %li.nav-item.dropdown
+            = link_to('Membership',
+                      '#',
+                      id: 'ddMembership',
+                      class: 'nav-link dropdown-toggle',
+                      role: 'button',
+                      data: { toggle: 'dropdown'}, aria: { haspopup: true, expanded: false })
+            .dropdown-menu{ 'aria-lebelledby' => 'ddMembership'}
+              = link_to 'Link 1', '#', class: 'dropdown-item'
+              = link_to 'Link 2', '#', class: 'dropdown-item'
+          %li.nav-item
+            = link_to('Events', '#', class: 'nav-link')
+          %li.nav-item
+            = link_to('Facility Rental', '#', class: 'nav-link')
+          %li.nav-item.dropdown
+            = link_to('News & Updates',
+                      '#',
+                      id: 'ddNews',
+                      class: 'nav-link dropdown-toggle',
+                      role: 'button',
+                      data: { toggle: 'dropdown'}, aria: { haspopup: true, expanded: false })
+            .dropdown-menu{ 'aria-lebelledby' => 'ddNews'}
+              = link_to 'Link 1', '#', class: 'dropdown-item'
+              = link_to 'Link 2', '#', class: 'dropdown-item'
+          %li.nav-item
+            = link_to('Contact', '#', class: 'nav-link')
