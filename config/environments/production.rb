@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
@@ -18,14 +20,14 @@ Rails.application.configure do
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
-  # config.require_master_key = true
+  config.require_master_key = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -51,21 +53,40 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
-  # Use the lowest log level to ensure availability of diagnostic information
-  # when problems arise.
+  # Semantic logger config
+  config.action_mailer.logger = SemanticLogger[ActionMailer::Base]
+  config.action_mailer.logger.level = :info
   config.log_level = :debug
-
-  # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.semantic_logger.backtrace_level = :error
+  config.rails_semantic_logger.format = :json
+  config.rails_semantic_logger.semantic   = true
+  config.rails_semantic_logger.started    = false
+  config.rails_semantic_logger.processing = false
+  config.rails_semantic_logger.rendered   = false
+  config.rails_semantic_logger.quiet_assets = true
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
+  # config.active_job.queue_adapter     = :sidekiq
   # config.active_job.queue_name_prefix = "webfez_#{Rails.env}"
 
+  config.action_controller.asset_host = 'https://alkadershriners.org'
+  config.action_mailer.asset_host = config.action_controller.asset_host
+  config.action_mailer.default_url_options = { host: 'alkadershriners.org' }
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp-relay.sendinblue.com',
+    :port => 587,
+    :domain => 'alkadershriners.org',
+    :user_name => Rails.application.credentials.sendinblue[:username],
+    :password => Rails.application.credentials.sendinblue[:password],
+    :authentication => 'login',
+    :enable_starttls_auto => true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -77,19 +98,6 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-
-  # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
-
-  # Use a different logger for distributed setups.
-  # require 'syslog/logger'
-  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  end
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
