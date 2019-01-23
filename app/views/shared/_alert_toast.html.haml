@@ -1,0 +1,7 @@
+.alert-toast.shadow{data: { controller: 'toast' }}
+  .media.alert.mb-0{role: 'alert', class: "alert-#{alert_type_for(type)}"}
+    .fa.fa-2x.align-self-center.alert__icon.mr-3
+    .media-body
+      %h5.my-0
+        = alert_title_for(type)
+      = message
