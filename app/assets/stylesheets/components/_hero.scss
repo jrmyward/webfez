@@ -1,0 +1,10 @@
+.hero {
+  position: relative;
+
+  &__lead-container {
+    background-color: rgba(map-get($colors, 'yellow'), 0.7);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+}

@@ -1,2 +1,51 @@
-%h1 Pages#home
-%p Find me in app/views/pages/home.html.haml
+- content_for :title, 'Al Kader Shriners'
+
+.hero
+  = image_tag('hero_201809.jpg', alt: 'Fun with a Purpose', class: 'img-fluid')
+  .hero__lead-container
+    .container
+      .text-center.py-3
+        %h1.pb-0.text-white Fun with a Purpose
+
+.bg-caution.py-3
+  .container
+    .text-center
+      %h2.text-white Refer a Child in Need to Shriners Hospital for Children
+      = link_to('http://www.shrinershospitalsforchildren.org/en/refer-a-patient',
+                class: 'btn bt-lg btn-danger mt-4') do
+        .h4.my-0.py-0
+          Refer a Child
+
+.pt-5
+  .container
+    .card-group
+      .card.bg-light
+        .card-body
+          = image_tag('card_oasis_201901.png', alt: 'Oasis Cover', class: 'img-fluid border border-primary')
+        .card-footer
+          = link_to('Oasis Newsletters', '#', class: 'btn btn-block btn-outline-primary')
+      .card.bg-primary
+        .card-body
+          = image_tag('card_event_space.png', alt: 'Shrine Center', class: 'img-fluid')
+        .card-footer
+          = link_to('Rent Our Facility', '#', class: 'btn btn-block btn-caution')
+      .card.bg-light
+        .card-body
+          = image_tag('card_event_calendar.jpg', alt: 'Shrine Center', class: 'img-fluid')
+        .card-footer
+          = link_to('Events', '#', class: 'btn btn-block btn-outline-primary')
+
+.py-5
+  .container
+    .row
+      .col-md-6
+        %h1.py-3.text-center Be a Shriner. Impact the Future.
+        %p.lead
+          When you become a Shriner, you become part of a brotherhood of men committed to family,
+          engaged in ongoing personal growth, and providing care for children and families in need.
+        .d-flex.justify-content-center
+          = link_to 'Become a Shriner', 'https://www.beashrinernow.com', class: 'btn btn-lg btn-danger my-3'
+      .col-md-6
+        .embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/oobAw14Dj5o"}
+
