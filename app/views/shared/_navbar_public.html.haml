@@ -18,9 +18,7 @@
       .row
         .col-6.mx-auto
           = link_to root_path, class: 'brand', title: 'Al Kader Logo' do
-            = image_tag('logo.png',
-              alt: 'Al Kader logo',
-              class: 'brand-logo')
+            = image_tag('logo.png', alt: 'Al Kader logo', class: 'brand-logo')
   %nav.navbar.navbar-expand-md
     .container
       = button_tag(class: 'navbar-toggler text-danger pl-0',
@@ -36,7 +34,7 @@
         %ul.navbar-nav.flex-fill.justify-content-between
           %li.nav-item.dropdown
             = link_to('About',
-                      '#',
+                      about_path(trailing_slash: true),
                       id: 'ddAbout',
                       class: 'nav-link dropdown-toggle',
                       role: 'button',
@@ -46,7 +44,7 @@
               = link_to 'Link 2', '#', class: 'dropdown-item'
           %li.nav-item.dropdown
             = link_to('Charity',
-                      '#',
+                      charity_path(trailing_slash: true),
                       id: 'ddCharity',
                       class: 'nav-link dropdown-toggle',
                       role: 'button',
@@ -56,7 +54,7 @@
               = link_to 'Link 2', '#', class: 'dropdown-item'
           %li.nav-item.dropdown
             = link_to('Membership',
-                      '#',
+                      membership_path(trailing_slash: true),
                       id: 'ddMembership',
                       class: 'nav-link dropdown-toggle',
                       role: 'button',
@@ -65,12 +63,14 @@
               = link_to 'Link 1', '#', class: 'dropdown-item'
               = link_to 'Link 2', '#', class: 'dropdown-item'
           %li.nav-item
-            = link_to('Events', '#', class: 'nav-link')
+            = link_to('Events', events_path(trailing_slash: true), class: 'nav-link')
           %li.nav-item
-            = link_to('Facility Rental', '#', class: 'nav-link')
+            = link_to('Facility Rental',
+                      facility_rental_path(trailing_slash: true),
+                      class: 'nav-link')
           %li.nav-item.dropdown
             = link_to('News & Updates',
-                      '#',
+                      news_updates_path(trailing_slash: true),
                       id: 'ddNews',
                       class: 'nav-link dropdown-toggle',
                       role: 'button',
@@ -79,4 +79,4 @@
               = link_to 'Link 1', '#', class: 'dropdown-item'
               = link_to 'Link 2', '#', class: 'dropdown-item'
           %li.nav-item
-            = link_to('Contact', '#', class: 'nav-link')
+            = link_to('Contact', contact_path(trailing_slash: true), class: 'nav-link')
