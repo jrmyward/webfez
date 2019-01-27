@@ -1,1 +1,103 @@
-%h1 COMING SOON
+- content_for :title, 'Shriners Hospitals for Children'
+
+.hero
+  = image_tag('hero_shriners_hospitals_for_children.jpg',
+              alt: 'Shriners Hospitals for Children',
+              class: 'img-fluid')
+
+.py-4
+  .container
+    .row
+      .col
+        %h2.text-danger.pb-3 Shriners Hospitals for Children
+        %p
+          facilities, located in the United States, Canada, and Mexico, provide advanced care for
+          children with orthopaedic conditions, burns, spinal cord injuries, and cleft lip and
+          palate.
+        %p
+          To donate to Shriners Hospitals for Children, visit
+          #{link_to('Support our Hospitals', 'https://www.shrinershospitalsforchildren.org/shc/donate')}.
+        %h3.text-danger.pb-2 A Historic Decision
+        %figure.figure.float-right.w-50.w-md-25.pl-3
+          = image_tag('charity_shriners_hospital_cornerstone.jpg',
+                      alt: 'Shrine Hospital Cornerstone Ceremony',
+                      class: 'img-fluid')
+          %figcaption.figure-caption.pt-1
+            Placing the cornerstone for the first Shriners Hospital.
+        %p
+          In 1919, Freeland Kendrick (Lu Lu Shriners, Philadelphia) was the Imperial
+          Potentate-elect for the 363,744 Shriners. He had long been searching for a cause for the
+          thriving group to support. In a visit to the Scottish Rite Hospital for Crippled Children
+          in Atlanta, he became aware of the overwhelming orthopaedic needs of children in North
+          America. As Imperial Potentate in 1919 and 1920, he traveled more than 150,000 miles,
+          visiting a majority of the 146 temples to campaign for an official philanthropy.
+        %p
+          At the June 1920 Imperial Session in Portland, Oregon, Kendrick proposed establishing
+          Shriners Hospital for Crippled Children (now #{link_to('Shriners Hospitals for Children', 'https://www.shrinershospitalsforchildren.org/shc')},
+          to be supported by a $2 yearly assessment from each Shriner (now $5 per year).
+        %p
+          A committee was chosen to determine the site and personnel for the Shriners Hospital.
+          After months of work, research and debate, the committee concluded that there should be
+          not just one hospital but a network of hospitals throughout North America. It was an idea
+          that appealed to Shriners, who liked to do things in a big and colorful way. When the
+          committee brought the proposal to the 1921 Imperial Session in Des Moines, Iowa, it too
+          was passed.
+        %h3.text-danger.pb-2 The First Hospital
+        %p
+          Before the June 1922 Imperial Session, the cornerstone was in place for the first
+          Shriners Hospital for Crippled Children in Shreveport, La. The rules were simple: To be
+          admitted, a child must be from a family unable to pay for the orthopaedic treatment he or
+          she would receive (this is no longer a requirement), be under 14 years of age (later
+          increased to 18) and be, in the opinion of the chief of staff, someone whose condition
+          could be helped.
+        %p
+          The network of orthopaedic hospitals grew as follows:
+        %ul
+          %li Shreveport, Sept. 16, 1922
+          %li Honolulu, Jan. 2, 1923
+          %li Twin Cities, March 12, 1923
+          %li San Francisco, June 16, 1923 (relocated to Sacramento in 1997)
+          %li Portland, Jan. 15, 1924
+          %li St. Louis, April 8, 1924
+          %li Spokane, Nov. 15, 1924
+          %li Salt Lake City, Jan. 22, 1925
+          %li Montreal, Feb. 18, 1925
+          %li Springfield, Feb. 21, 1925
+          %li Chicago, March 20, 1926
+          %li Philadelphia, June 24, 1926
+          %li Lexington, Nov. 1, 1926
+          %li Greenville, Sept. 1, 1927
+          %li Mexico City, March 10, 1945
+          %li Houston, Feb. 1, 1952
+          %li Los Angeles, Feb. 25, 1952
+          %li Winnipeg, March 16, 1952 (closed Aug. 12, 1977)
+          %li Erie, April 1, 1967
+          %li Tampa, Oct. 16, 1985
+          %li Sacramento, Calif., April 14, 1997.
+        %p
+          The first patient to be admitted in 1922 was a little girl with a clubfoot, who had
+          learned to walk on the top of her foot rather than the sole. The first child to be
+          admitted at the Twin Cities hospital was a boy with polio. Since that time, approximately
+          835,000 children have been treated at the 22 Shriners Hospitals. Surgical techniques
+          developed in Shriners Hospitals have become standard in the orthopaedic world. Thousands
+          of children have been fitted with arm and leg braces and artificial limbs, most of them
+          made at the hospitals by expert technicians.
+        .embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item.py-3{allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen: '', frameborder: '0', src: 'https://www.youtube.com/embed/lozL9qZJ74A'}
+        %h3.text-danger.pb-2 Research
+        %p
+          One way Shriners Hospitals for Children improves lives is through outcomes research. This
+          type of research looks for opportunities to improve hospital practices, both clinical and
+          operational, to help bring better care and quality of life to patients. The outcomes
+          studies utilize more than one Shriners Hospital, and the projects, studies and
+          performance improvement initiatives directly impact changes in operations and patient
+          care practices at all 22 Shriners Hospitals.
+        %p
+          To ensure Shriners Hospitals for Children is constantly on the cutting edge of research,
+          staff enlists the help of advisory boards, which are made up of eminent surgeons,
+          clinicians and scientists who review grants and offer expertise on project funding. The
+          Medical Advisory Board, Research Advisory Board and Clinical Outcomes Studies Advisory
+          Board also provide review, guidance and subjective assessment to many areas of Shriners
+          Hospitals.
+        .embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item.py-3{allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen: '', frameborder: '0', src: 'https://www.youtube.com/embed/dxwatenHC6I'}
