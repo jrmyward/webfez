@@ -36,7 +36,7 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  config.action_controller.asset_host = 'https://www.alkadershriners.org'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -72,21 +72,21 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :sidekiq
   # config.active_job.queue_name_prefix = "webfez_#{Rails.env}"
 
-  config.action_controller.asset_host = 'https://alkadershriners.org'
-  config.action_mailer.asset_host = config.action_controller.asset_host
-  config.action_mailer.default_url_options = { host: 'alkadershriners.org' }
-  config.action_mailer.perform_caching = false
+  # config.action_controller.asset_host = 'https://www.alkadershriners.org'
+  # config.action_mailer.asset_host = config.action_controller.asset_host
+  # config.action_mailer.default_url_options = { host: 'alkadershriners.org' }
+  # config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => 'smtp-relay.sendinblue.com',
-    :port => 587,
-    :domain => 'alkadershriners.org',
-    :user_name => Rails.application.credentials.sendinblue[:username],
-    :password => Rails.application.credentials.sendinblue[:password],
-    :authentication => 'login',
-    :enable_starttls_auto => true
-  }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address => 'smtp-relay.sendinblue.com',
+  #   :port => 587,
+  #   :domain => 'alkadershriners.org',
+  #   :user_name => Rails.application.credentials.sendinblue[:username],
+  #   :password => Rails.application.credentials.sendinblue[:password],
+  #   :authentication => 'login',
+  #   :enable_starttls_auto => true
+  # }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
