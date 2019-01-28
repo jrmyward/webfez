@@ -1,6 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
+  # Automatically inject JavaScript needed for LiveReload
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = true
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -13,6 +19,8 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+
+  config.require_master_key = true
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
@@ -33,12 +41,30 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
+  config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_mailer.asset_host = config.action_controller.asset_host
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
   config.action_mailer.perform_caching = false
+  config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/previews"
+
+  # Semantic logger config
+  config.action_mailer.logger = SemanticLogger[ActionMailer::Base]
+  config.action_mailer.logger.level = :info
+  config.log_level = :debug
+  config.semantic_logger.backtrace_level = :info
+  config.rails_semantic_logger.format = :color
+  config.rails_semantic_logger.semantic   = true
+  config.rails_semantic_logger.started    = false
+  config.rails_semantic_logger.processing = false
+  config.rails_semantic_logger.rendered   = false
+  config.rails_semantic_logger.quiet_assets = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+  # Suppress logger output for asset requests.
+  # config.assets.quiet = true
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
@@ -50,9 +76,6 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
-  # Suppress logger output for asset requests.
-  config.assets.quiet = true
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

@@ -1,0 +1,12 @@
+.footer {
+  color: map-get($colors, 'white');
+  background-color: map-get($colors, 'red');
+
+  &--top {
+
+  }
+
+  &--bottom {
+    background-image: asset-url('bg_pattern_45-degree-fabric-dark.png');
+  }
+}

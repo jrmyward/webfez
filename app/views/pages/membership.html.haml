@@ -1,0 +1,61 @@
+- content_for :title, 'Membership'
+
+.hero
+  = image_tag('hero_fezzed.jpg', alt: 'Becoming a Shriner', class: 'img-fluid')
+  .hero__lead-container
+    .container
+      .text-center.py-3
+        %h1.pb-0.text-white Becoming a Shriner
+
+.py-4
+  .container
+    .row
+      .col
+        %h2.text-danger.pb-3 Membership
+        %h3.text-danger.pb-2 Becoming a Shriner
+        %p
+          Al Kader Shriners wants you to join us in our fun with a purpose and the world’s greatest
+          philanthropy: #{link_to('Shriners Hospitals for Children', 'https://www.shrinershospitalsforchildren.org/shc')}.
+        %p
+          Please take a few minutes and view the following videos where you will hear first hand
+          about being a Mason and Shriner.
+        .embed-responsive.embed-responsive-16by9.w-md-50
+          %iframe.embed-responsive-item.py-3{allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen: '', frameborder: '0', src: 'https://www.youtube.com/embed/FtOMH7kSbwY'}
+        .embed-responsive.embed-responsive-16by9.w-md-50
+          %iframe.embed-responsive-item.py-3{allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen: '', frameborder: '0', src: 'https://www.youtube.com/embed/tDa4z-UsbxI'}
+        %h3.text-danger.pb-2 The Shriners Invite You to Join!
+        %p
+          To qualify, you must be a Master Mason in good standing and hold a current blue lodge
+          dues card. It is no longer a requirement that you be a 32nd Degree Scottish Rite or York
+          Rite Mason before becoming a Shriner (however, we strongly encourage you to join one or
+          both of the rites).
+        %p
+          If you are not a Freemason, you must pursue that first. The
+          #{link_to('Grand Lodge of Oregon', 'https://www.masonic-oregon.com/how-to-become-a-mason/')}
+          and #{link_to('BeAShrinerNow.com', 'https://www.beashrinernow.com/About/Freemasons/BecomeAMason')}
+          have resources on their websites to help you on this journey. Once you are a Master Mason
+          you will then be eligible to petition to become a Shriner.
+        %h4.text-danger.pb-2 Directions for Membership:
+        %p
+          Complete the #{link_to('membership petition form', asset_path('petition_al_kader_shrine.pdf'))},
+          and obtain the signatures of two Al Kader Shriners (if you do not know a Shriner, we can
+          provide nobles to sign your application). Include a copy of your current blue lodge dues
+          card and mail with your membership dues check to:
+        %p
+          Al Kader Shrine Center
+          %br/
+          25100 SW Parkway Avenue
+          %br/
+          Wilsonville, Oregon 97070-9600
+        %p
+          You will then be notified of the next ceremonial* event.
+        %p
+          However, we want you to participate now. Once we receive your application, we will be
+          contacting you to provide information on our many units and clubs. You and your lady will
+          be invited to our next social event.
+        %p.text-muted.small
+          * This event is usually held at the Shriners center in Wilsonville. It does not require
+          any memory work on your part. The ceremonial gives you (and your lady) the opportunity to
+          tour the Portland Shriners Hospital and witness the beautiful ritualistic section and
+          ceremonies. You will then undergo a Fezzing Ceremony and become a Noble of Ancient Arabic
+          Order Nobles of the Mystic Shrine. No hazing is allowed in any of our ceremonies.

@@ -1,0 +1,3 @@
+- if flash.present?
+  - flash.each do |name, msg|
+    = render partial: 'shared/alert_toast', locals: { type: name, message: msg }

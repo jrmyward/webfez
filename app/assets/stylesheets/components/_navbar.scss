@@ -1,0 +1,10 @@
+.navbar {
+  .dropdown:hover > .dropdown-menu, {
+    display: block;
+  }
+
+  .nav-link {
+    color: map-get($colors, 'red');
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,7 @@
+.bg {
+  &-caution {
+    &--light {
+      background-color: lighten(map-get($colors, 'yellow'), 20%);
+    }
+  }
+}
