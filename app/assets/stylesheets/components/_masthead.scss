@@ -1,21 +1,35 @@
 .masthead {
-  background-color: map-get($colors, 'red');
+  display: none;
+}
 
-  .nav-link {
-    color: map-get($colors, 'white');
 
-    &:hover {
-      font-weight: 600;
-      text-decoration: underline;
+@media (min-width: 768px) {
+  .masthead {
+    background-color: map-get($colors, 'red');
+    display: block;
+
+    .nav-link {
+      color: map-get($colors, 'white');
+
+      &:hover {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      &--social {
+        padding: 0;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+      }
     }
-  }
 
-  &--brand {
-    background-color: transparent;
-    border-bottom: 1px solid map-get($grays, '400');
+    &--brand {
+      background-color: transparent;
+      border-bottom: 1px solid map-get($grays, '400');
 
-    .brand-logo {
-      width: 100%
+      .brand-logo {
+        width: 100%
+      }
     }
   }
 }

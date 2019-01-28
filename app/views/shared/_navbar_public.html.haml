@@ -12,6 +12,16 @@
                   'https://www.shrinershospitalsforchildren.org/portland',
                   class: 'nav-link',
                   target: '_blank')
+        = link_to('https://www.facebook.com/alkadershriners',
+                  class: 'nav-link nav-link--social ml-auto', target: '_blank') do
+          = fa_icon('facebook-square')
+        = link_to('https://plus.google.com/107320760460747810116',
+                  class: 'nav-link nav-link--social', target: '_blank') do
+          = fa_icon('google-plus-square')
+        = link_to('https://twitter.com/alkader',
+                  class: 'nav-link nav-link--social', target: '_blank') do
+          = fa_icon('twitter-square')
+
 
   .masthead.masthead--brand
     .container.py-3
@@ -21,14 +31,15 @@
             = image_tag('logo.png', alt: 'Al Kader logo', class: 'brand-logo')
   %nav.navbar.navbar-expand-md
     .container
-      = button_tag(class: 'navbar-toggler text-danger pl-0',
+      = link_to(root_path, class: 'navbar-brand w-75 d-md-none', title: 'Al Kader Logo') do
+        = image_tag('logo.png', alt: 'Al Kader logo', class: 'img-fluid')
+      = link_to('', class: 'navbar-toggler text-danger ml-auto',
         type: 'button',
         data: { toggle: 'collapse', target: '#primaryNav' },
         'aria-controls' => 'primaryNav',
         'aria-expanded' => 'false',
         'aria-label' => 'Toggle navigation') do
         %i.fa.fa-bars
-        Menu
 
       #primaryNav.navbar-collapse.collapse
         %ul.navbar-nav.flex-fill.justify-content-between
@@ -37,8 +48,8 @@
                       about_path(trailing_slash: true),
                       class: 'nav-link',
                       role: 'button')
-            = button_tag(id: 'ddAbout',
-                         class: 'btn dropdown-toggle dropdown-toggle-split',
+            = link_to('', id: 'ddAbout',
+                         class: 'nav-link dropdown-toggle dropdown-toggle-split',
                          aria: { expanded: false, haspopup: true },
                          data: { toggle: 'dropdown' },
                          role: 'button') do
@@ -55,8 +66,8 @@
                       charity_path(trailing_slash: true),
                       class: 'nav-link',
                       role: 'button')
-            = button_tag(id: 'ddCharity',
-                         class: 'btn dropdown-toggle dropdown-toggle-split',
+            = link_to('', id: 'ddCharity',
+                         class: 'nav-link dropdown-toggle dropdown-toggle-split',
                          aria: { expanded: false, haspopup: true },
                          data: { toggle: 'dropdown' },
                          role: 'button') do
@@ -70,8 +81,8 @@
                       membership_path(trailing_slash: true),
                       class: 'nav-link',
                       role: 'button')
-            = button_tag(id: 'ddMembership',
-                         class: 'btn dropdown-toggle dropdown-toggle-split',
+            = link_to('', id: 'ddMembership',
+                         class: 'nav-link dropdown-toggle dropdown-toggle-split',
                          aria: { expanded: false, haspopup: true },
                          data: { toggle: 'dropdown' },
                          role: 'button') do

@@ -6,9 +6,5 @@
   .nav-link {
     color: map-get($colors, 'red');
     font-weight: 500;
-
-    &::after {
-      margin-left: 0.5em;
-    }
   }
 }
