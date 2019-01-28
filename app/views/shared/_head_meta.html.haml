@@ -4,6 +4,6 @@
 %title= content_for?(:title) ? "#{yield(:title)} | Al Kader Shriners" : 'Al Kader Shriners'
 %meta{content: content_for?(:meta_author) ? "#{yield(:meta_author)}" : 'Al Kader Shriners', name: 'author'}/
 %meta{content: content_for?(:description) ? "#{yield(:description)}" : '', name: 'description'}/
--# = favicon_link_tag asset_path('favicon-32x32.png'), rel: 'icon', type:  'image/png'
+= favicon_link_tag asset_path('favicon.ico'), rel: 'icon', type:  'image/x-icon'
 = csrf_meta_tag
 = csp_meta_tag
