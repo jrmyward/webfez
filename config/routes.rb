@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   # Static pages
   get '/about', to: 'pages#about'
+  scope 'about' do
+    get 'shriners-international', to: 'pages#shriners_international'
+  end
   get '/charity', to: 'pages#charity'
   get '/contact', to: 'pages#contact'
   get '/events', to: 'pages#events'

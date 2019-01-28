@@ -18,4 +18,6 @@ class PagesController < ApplicationController
   def memberships; end
 
   def news; end
+
+  def shriners_international; end
 end

@@ -47,7 +47,9 @@
               = link_to('Al Kader Shriners',
                         about_path(trailing_slash: true),
                         class: 'dropdown-item')
-              = link_to 'Link 2', '#', class: 'dropdown-item'
+              = link_to('Shriners International',
+                        shriners_international_path(trailing_slash: true),
+                        class: 'dropdown-item')
           %li.nav-item.btn-group.dropdown
             = link_to('Charity',
                       charity_path(trailing_slash: true),
@@ -84,19 +86,5 @@
             = link_to('Facility Rental',
                       facility_rental_path(trailing_slash: true),
                       class: 'nav-link')
-          %li.nav-item.btn-group.dropdown
-            = link_to('News & Updates',
-                      news_updates_path(trailing_slash: true),
-                      class: 'nav-link',
-                      role: 'button')
-            = button_tag(id: 'ddNews',
-                         class: 'btn dropdown-toggle dropdown-toggle-split',
-                         aria: { expanded: false, haspopup: true },
-                         data: { toggle: 'dropdown' },
-                         role: 'button') do
-              %span.sr-only Toggle Dropdown
-            .dropdown-menu{ 'aria-lebelledby' => 'ddNews'}
-              = link_to 'Link 1', '#', class: 'dropdown-item'
-              = link_to 'Link 2', '#', class: 'dropdown-item'
           %li.nav-item
             = link_to('Contact', contact_path(trailing_slash: true), class: 'nav-link')
