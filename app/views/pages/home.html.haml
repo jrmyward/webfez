@@ -21,19 +21,25 @@
     .card-group
       .card.bg-light
         .card-body
-          = image_tag('card_oasis_201901.png', alt: 'Oasis Cover', class: 'img-fluid border border-primary')
+          = image_tag('card_oasis_201901.png',
+                      alt: 'Oasis Cover',
+                      class: 'img-fluid border border-primary')
         .card-footer
           = link_to('Oasis Newsletters', '#', class: 'btn btn-block btn-outline-primary')
       .card.bg-primary
         .card-body
           = image_tag('card_event_space.png', alt: 'Shrine Center', class: 'img-fluid')
         .card-footer
-          = link_to('Rent Our Facility', '#', class: 'btn btn-block btn-caution')
+          = link_to('Rent Our Facility',
+                    facility_rental_path(trailing_slash: true),
+                    class: 'btn btn-block btn-caution')
       .card.bg-light
         .card-body
           = image_tag('card_event_calendar.jpg', alt: 'Shrine Center', class: 'img-fluid')
         .card-footer
-          = link_to('Events', '#', class: 'btn btn-block btn-outline-primary')
+          = link_to('Events',
+                    events_path(trailing_slash: true),
+                    class: 'btn btn-block btn-outline-primary')
 
 .py-5
   .container

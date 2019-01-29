@@ -3,13 +3,32 @@
     .container
       .row
         .col-md-3
-          Footer One
+          %h4 About
+          %ul.list-unstyled
+            %li
+              = link_to('Al Kader Shriners',
+                        about_path(trailing_slash: true),
+                        class: 'text-white')
+            %li
+              = link_to('Shriners International',
+                        shriners_international_path(trailing_slash: true),
+                        class: 'text-white')
         .col-md-3
-          Footer Two
+          %h4 Charity
+          %ul.list-unstyled
+            %li
+              = link_to('Shriners Hospitals for Children',
+                        charity_path(trailing_slash: true),
+                        class: 'text-white')
         .col-md-3
-          Footer Trhee
+          %h4 Membership
+          %ul.list-unstyled
+            %li
+              = link_to('Becoming a Shriner',
+                        membership_path(trailing_slash: true),
+                        class: 'text-white')
         .col-md-3
-          Footer Four
+          %h4 Resources
   .footer--bottom.py-5
     .container
       .row
