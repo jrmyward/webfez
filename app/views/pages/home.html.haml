@@ -1,7 +1,7 @@
 - content_for :title, 'Al Kader Shriners'
 
 .hero
-  = image_tag('hero_201809.jpg', alt: 'Fun with a Purpose', class: 'img-fluid')
+  = image_tag('hero_201902.jpg', alt: 'Fun with a Purpose', class: 'img-fluid')
   .hero__lead-container
     .container
       .text-center.py-3
@@ -50,7 +50,9 @@
           When you become a Shriner, you become part of a brotherhood of men committed to family,
           engaged in ongoing personal growth, and providing care for children and families in need.
         .d-flex.justify-content-center
-          = link_to 'Become a Shriner', 'https://www.beashrinernow.com', class: 'btn btn-lg btn-danger my-3'
+          = link_to('Become a Shriner',
+                    'https://www.beashrinernow.com',
+                    class: 'btn btn-lg btn-danger mt-3 mb-5 mb-md-3')
       .col-md-6
         .embed-responsive.embed-responsive-16by9
           %iframe.embed-responsive-item{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => "https://www.youtube.com/embed/oobAw14Dj5o"}
