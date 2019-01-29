@@ -3,9 +3,19 @@
 
   &__lead-container {
     background-color: rgba(map-get($colors, 'yellow'), 0.7);
-    bottom: 0;
-    position: absolute;
     width: 100%;
     text-shadow: 1px 1px 2px map-get($colors, 'black');
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    &__lead-container {
+      background-color: rgba(map-get($colors, 'yellow'), 0.7);
+      bottom: -1px;
+      position: absolute;
+      width: 100%;
+      text-shadow: 1px 1px 2px map-get($colors, 'black');
+    }
   }
 }
