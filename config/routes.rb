@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/facility-rental', to: 'pages#facility_rental'
   get '/membership', to: 'pages#membership'
   get '/news-updates', to: 'pages#news'
+  get '/privacy', to: 'pages#privacy'
 
   root to: 'pages#home'
 end

@@ -29,6 +29,11 @@
                         class: 'text-white')
         .col-md-3
           %h4 Resources
+          %ul.list-unstyled
+            %li
+              = link_to('Privacy Policy',
+                        privacy_path(trailing_slash: true),
+                        class: 'text-white')
   .footer--bottom.py-5
     .container
       .row
