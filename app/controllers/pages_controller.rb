@@ -19,5 +19,7 @@ class PagesController < ApplicationController
 
   def news; end
 
+  def privacy; end
+
   def shriners_international; end
 end
