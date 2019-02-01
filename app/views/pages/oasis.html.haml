@@ -1,0 +1,37 @@
+- content_for :title, 'Oasis'
+
+.py-4.border-top.border-medium
+  .container
+    .row.pt-3
+      .col.d-flex.justify-content-between
+        %h1.text-danger.pb-3 The Oasis Newsletter
+        = render partial: 'shared/oasis_archive_dropdown'
+    .row.py-3.mb-3
+      .col-4
+        .card.bg-light
+          .card-header
+            %h3.h4.my-0.text-danger.text-center February 2019
+          .card-body
+            = image_tag('card_oasis_2019_02.jpg',
+                        alt: 'Oasis Cover - 2019-02',
+                        class: 'img-fluid border border-primary')
+          .card-footer
+            = link_to('Download',
+              '/oasis/oasis_2019_02.pdf',
+              class: 'btn btn-block btn-outline-danger')
+      .col-8
+        %h2 History of the Oasis
+    .row.border-top.border-medium
+    .row.py-3.mt-3
+      .col-3
+        .card.bg-light
+          .card-header
+            %h3.h4.my-0.text-danger.text-center January 2019
+          .card-body
+            = image_tag('card_oasis_2019_01.jpg',
+                        alt: 'Oasis Cover - 2019-01',
+                        class: 'img-fluid border border-primary')
+          .card-footer
+            = link_to('Download',
+              '/oasis/oasis_2019_01.pdf',
+              class: 'btn btn-block btn-outline-danger')

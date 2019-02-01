@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   get '/facility-rental', to: 'pages#facility_rental'
   get '/membership', to: 'pages#membership'
   get '/news-updates', to: 'pages#news'
+  get '/oasis', to: 'pages#oasis'
+  scope 'oasis' do
+    get '2018', to: 'pages#oasis_2018', as: 'oasis_2018'
+  end
   get '/privacy', to: 'pages#privacy'
 
   root to: 'pages#home'
