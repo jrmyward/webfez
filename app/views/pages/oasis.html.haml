@@ -3,11 +3,11 @@
 .py-4.border-top.border-medium
   .container
     .row.pt-3
-      .col.d-flex.justify-content-between
+      .col-12.d-md-flex.justify-content-md-between
         %h1.text-danger.pb-3 The Oasis Newsletter
         = render partial: 'shared/oasis_archive_dropdown'
     .row.py-3.mb-3
-      .col-4
+      .col-md-4
         .card.bg-light
           .card-header
             %h3.h4.my-0.text-danger.text-center February 2019
@@ -19,11 +19,18 @@
             = link_to('Download',
               '/oasis/oasis_2019_02.pdf',
               class: 'btn btn-block btn-outline-danger')
-      .col-8
-        %h2 History of the Oasis
+      .col-md-8
+        %h2.mb-4.text-danger History of the Oasis
+        %p
+          The Al Kader "Oasis" began as the newsletter of the temple and was soon a monthly
+          publication distributed throughout Al Kader's nobility and the other Shrine Centers of
+          the Pacific Northwest.
+        %p
+          Today, it is also published on the Al Kader website.
+
     .row.border-top.border-medium
     .row.py-3.mt-3
-      .col-3
+      .col-md-3
         .card.bg-light
           .card-header
             %h3.h4.my-0.text-danger.text-center January 2019
