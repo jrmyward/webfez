@@ -12,6 +12,9 @@
                   'https://www.shrinershospitalsforchildren.org/portland',
                   class: 'nav-link',
                   target: '_blank')
+        %span.nav-link.mx-0.px-0
+          |
+        = link_to('Contact', contact_path(trailing_slash: true), class: 'nav-link')
         = link_to('https://www.facebook.com/alkadershriners',
                   class: 'nav-link nav-link--social ml-auto', target: '_blank') do
           = fa_icon('facebook-square')
@@ -98,4 +101,7 @@
                       facility_rental_path(trailing_slash: true),
                       class: 'nav-link')
           %li.nav-item
-            = link_to('Contact', contact_path(trailing_slash: true), class: 'nav-link')
+            = link_to('Order Shirts!',
+                    'http://www.titanbiz.co/2019-shirts.htm',
+                    class: 'nav-link btn btn-small btn-caution text-white',
+                    target: '_blank')
