@@ -18,6 +18,29 @@
 
 .pt-5
   .container
+    .row
+      .col-md-8
+        %h1.py-3.text-center East West Shrine Game Apparel
+        %p.lead
+          The East West Shrine Game Committee would like to announce to the Nobles that we now have
+          an online store for ordering Game Apparel. All Profits still get submitted to the
+          committee and then in turn to the hospital.
+
+        %p
+          We encourage the Nobles and Families to Order from the following link as we strive to
+          reduce overhead in our merchandise trailer. The other huge benefit to this is that
+          nobles can order year round and do not have to be at the game to get apparel like the
+          Shriner Leather Lettermans Jacket.
+        .d-flex.justify-content-center
+          = link_to('Shop Now!',
+                    'https://www.titanbiz.co/sr/1641664',
+                    class: 'btn btn-lg btn-danger mt-3 mb-5 mb-md-3')
+      .col-md-4
+        = image_tag('shop_game_apparel.jpg',
+                      alt: 'East-West Shrine Game Apparel',
+                      class: 'img-fluid')
+.pt-5
+  .container
     .card-group
       .card.bg-light
         .card-body
