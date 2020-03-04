@@ -51,7 +51,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sidekiq'
 
 # server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 gem 'redis', '~> 4.0'
 
 # services - third party
