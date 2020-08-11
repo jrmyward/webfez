@@ -48,7 +48,9 @@
                       alt: 'Oasis Cover',
                       class: 'img-fluid border border-primary')
         .card-footer
-          = link_to('Oasis Newsletters', oasis_path, class: 'btn btn-block btn-outline-primary')
+          = link_to('Oasis Newsletters',
+                    oasis_path(trailing_slash: true),
+                    class: 'btn btn-block btn-outline-primary')
       .card.bg-primary
         .card-body
           = image_tag('card_event_space.png', alt: 'Shrine Center', class: 'img-fluid')
