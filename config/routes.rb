@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/news-updates', to: 'pages#news'
   get '/oasis', to: 'pages#oasis'
   scope 'oasis' do
+    get '2020', to: 'pages#oasis_2020', as: 'oasis_2020'
     get '2019', to: 'pages#oasis_2019', as: 'oasis_2019'
     get '2018', to: 'pages#oasis_2018', as: 'oasis_2018'
   end
